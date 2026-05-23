@@ -1,0 +1,13 @@
+models:
+  - model: vohuutridung/qwen3-1.7b-summarization-cnn
+    parameters:
+      weight: 1
+  - model: vohuutridung/qwen3-1.7b-summarization-arxiv-full
+    parameters:
+      weight: 1
+  - model: vohuutridung/qwen3-1.7b-summarization-mediasum
+    parameters:
+      weight: 1
+
+merge_method: linear
+dtype: bfloat16
