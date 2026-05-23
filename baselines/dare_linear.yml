@@ -1,0 +1,50 @@
+models:  
+  - model: vohuutridung/qwen3-1.7b-summarization-cnn  
+    parameters:  
+      weight:  
+        - filter: "model.embed_tokens"  
+          value: 0.0  
+        - filter: "lm_head"  
+          value: 0.0  
+        - value: 0.6  
+      density:  
+        - filter: "model.embed_tokens"  
+          value: 1.0  
+        - filter: "lm_head"  
+          value: 1.0  
+        - value: 0.9 
+  
+  - model: vohuutridung/qwen3-1.7b-summarization-arxiv-full  
+    parameters:  
+      weight:  
+        - filter: "model.embed_tokens"  
+          value: 0.0  
+        - filter: "lm_head"  
+          value: 0.0  
+        - value: 0.6  
+      density:  
+        - filter: "model.embed_tokens"  
+          value: 1.0  
+        - filter: "lm_head"  
+          value: 1.0  
+        - value: 0.9  
+  
+  - model: vohuutridung/qwen3-1.7b-summarization-mediasum  
+    parameters:  
+      weight:  
+        - filter: "model.embed_tokens"  
+          value: 0.0  
+        - filter: "lm_head"  
+          value: 0.0  
+        - value: 0.6  
+      density:  
+        - filter: "model.embed_tokens"  
+          value: 1.0  
+        - filter: "lm_head"  
+          value: 1.0  
+        - value: 0.9
+
+merge_method: dare_linear
+base_model: vohuutridung/qwen3-1.7b
+dtype: bfloat16
+tokenizer_source: base
